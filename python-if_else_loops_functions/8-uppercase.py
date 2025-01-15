@@ -2,8 +2,10 @@
 
 def uppercase(str):
     for c in str:
-        if 'a' <= c <= 'z':  # Vérifie si c est une minuscule
-            print(chr(ord(c) - 32), end='')  # Convertit en majuscule
+        if 'a' <= c <= 'z':  # Si c est une lettre minuscule
+            # Convertir le caractère minuscule en majuscule
+            print(chr(ord(c) - 32), end='')
         else:
-            print(c, end='')  # Affiche les autres caractères tels quels
-    print()  # Pour ajouter un saut de ligne après l'affichage
+            # Si c n'est pas une minuscule, l'afficher tel quel
+            print(c, end='')
+    print()  # Ajouter un saut de ligne après l'affichage de toute la chaîne
