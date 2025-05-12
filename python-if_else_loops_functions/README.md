@@ -1,93 +1,118 @@
-Python Control Flow Project
-Bienvenue sur le projet Python - Contrôle du flux d'exécution !
-Ce projet vous permettra de maîtriser les bases essentielles de Python, notamment l’utilisation des conditions, des boucles, des fonctions et des bonnes pratiques de style de code.
+# Python - if/else, loops, functions
 
-📚 Objectifs d’Apprentissage
+Bienvenue dans ce projet sur le contrôle du flux en Python. Vous allez découvrir l’importance de l’indentation, l’utilisation des conditions, des boucles, des fonctions et les bonnes pratiques de base pour écrire du code Python lisible et efficace.
+
+---
+
+## 🎯 Objectifs pédagogiques
+
 À la fin de ce projet, vous serez capable d’expliquer et d’appliquer :
 
-Pourquoi l’indentation est cruciale en Python
+- Pourquoi l’**indentation** est essentielle en Python
+- Comment utiliser les instructions `if`, `elif`, `else`
+- Comment écrire des **commentaires**
+- Comment affecter des valeurs à des **variables**
+- Comment utiliser les boucles `while` et `for`
+- Comment utiliser les instructions `break` et `continue`
+- Comment utiliser la clause `else` sur les boucles
+- À quoi sert l’instruction `pass` et quand l’utiliser
+- Comment utiliser `range`
+- Ce qu’est une **fonction** et comment la définir/appeler
+- Ce que retourne une fonction sans instruction `return`
+- La notion de **portée des variables** (scope)
+- Ce qu’est un **traceback**
+- Les **opérateurs arithmétiques** et leur utilisation
 
-Comment utiliser les instructions if et if ... else
+---
 
-Comment écrire et utiliser des commentaires
+## 📝 Bonnes pratiques et style
 
-Comment affecter des valeurs à des variables
+- **Indentation** : Utilisez **4 espaces** par niveau d’indentation (recommandé par PEP8)[3][6][8]. L’indentation est obligatoire pour délimiter les blocs de code (après `if`, `for`, `while`, fonctions, etc.)[1][4][5][7].
+- **Commentaires** : Utilisez `#` pour expliquer votre code.
+- **Shebang** : La première ligne de chaque fichier doit être `#!/usr/bin/python3`.
+- **pycodestyle** : Vérifiez la conformité de votre code avec la commande `pycodestyle`.
+- **Fichiers** : Tous vos scripts doivent être exécutables et se terminer par une nouvelle ligne.
 
-Comment utiliser les boucles while et for
+---
 
-Comment utiliser les instructions break et continue
+## 🚀 Exemples de base
 
-Comment utiliser la clause else avec les boucles
+### If / Else
 
-À quoi sert l’instruction pass et quand l’utiliser
+x = 10
+if x > 5:
+print("x est supérieur à 5")
+elif x == 5:
+print("x vaut 5")
+else:
+print("x est inférieur à 5")
 
-Comment utiliser la fonction range
+text
 
-Ce qu’est une fonction et comment en créer/utiliser
+### Boucles
 
-Ce que retourne une fonction sans instruction return
+for i in range(3):
+print(i) # Affiche 0, 1, 2
 
-La notion de portée des variables (scope)
+n = 0
+while n < 3:
+print(n)
+n += 1
 
-Ce qu’est un traceback
+text
 
-Les opérateurs arithmétiques et leur utilisation
+### Break, Continue, Else sur les boucles
 
-📝 Ressources recommandées
-More Control Flow Tools (jusqu’à “4.6. Defining Functions” inclus)
+for i in range(5):
+if i == 3:
+break
+print(i)
+else:
+print("Boucle terminée sans break")
 
-IndentationError
+text
 
-How To Use String Formatters in Python 3
+### Pass
 
-Learn to Program 2 : Looping
+if x > 5:
+pass # À utiliser quand aucune action n’est nécessaire pour l’instant
 
-Pycodestyle – Guide de style pour Python
+text
 
-Utilisez la commande man ou help pour obtenir de l’aide sur python3
+### Fonctions
 
-🛠️ Exigences techniques
-Langage : Python 3.8.*
+def hello(name):
+print(f"Bonjour, {name}!")
 
-Éditeurs autorisés : vi, vim, emacs
+hello("Alice")
 
-Système : Ubuntu 20.04 LTS
+text
 
-Style : Respectez les règles de pycodestyle (2.7.*)
+---
 
-Fichiers :
+## 📚 Ressources utiles
 
-Tous les fichiers doivent finir par une nouvelle ligne
+- [More Control Flow Tools (docs.python.org)][2]
+- [IndentationError][1]
+- [PEP8 – Guide de style Python][3]
+- [Learn to Program 2 : Looping][4]
+- [Pycodestyle][3]
 
-La première ligne de chaque fichier doit être :
-#!/usr/bin/python3
+---
 
-Tous vos fichiers doivent être exécutables
+## 🛠️ Exigences techniques
 
-Un fichier README.md est obligatoire à la racine du projet
+- **Éditeurs autorisés** : vi, vim, emacs
+- **Python** : Version 3.8.* sur Ubuntu 20.04 LTS
+- **Style** : Respect de pycodestyle (2.7.*)
+- **Fichiers** : Exécutables, nouvelle ligne en fin de fichier, shebang obligatoire, README.md à la racine du projet
 
-La longueur des fichiers sera vérifiée avec la commande wc
+---
 
-💡 Conseils
-Indentation : En Python, l’indentation structure le code. Une mauvaise indentation provoque des erreurs (IndentationError).
+**Auteur** : Guillaume  
+**Niveau** : Novice  
+**Poids** : 1
 
-Commentaires : Utilisez # pour expliquer votre code et le rendre plus lisible.
+---
 
-Bonne pratique : Testez régulièrement votre code et respectez le guide de style pour une meilleure lisibilité et maintenabilité.
-
-🚀 Démarrage rapide
-bash
-# Rendez vos scripts exécutables
-chmod +x script.py
-
-# Exécutez un script
-./script.py
-🏆 Progression
-Votre score sera mis à jour au fur et à mesure de votre progression.
-N’hésitez pas à relire les ressources et à expérimenter directement dans vos fichiers Python.
-
-Auteur : Guillaume
-Niveau : Novice
-Poids : 1
-
-Bon apprentissage et bon code ! 🚀
+Maîtrisez les bases du contrôle de flux et des fonctions pour écrire du code Python clair, robuste et professionnel !
