@@ -15,10 +15,20 @@ class VerboseList(list):
         print(f"Extended the list with [{count}] items.")
 
     def remove(self, item):
-        print(f"Removed [{item}] from the list.")
-        super().remove(item)
+        if item in self:
+            print(f"Removed [{item}] from the list.")
+            super().remove(item)
+        else:
+            print(f"Item [{item}] not found in the list.")
 
     def pop(self, index=-1):
-        item = self[index]  # raises IndexError if out of range
-        print(f"Popped [{item}] from the list.")
-        return super().pop(index)
+        if len(self) == 0:
+            print("Cannot pop from an empty list.")
+            return None
+        try:
+            item = self[index]
+            print(f"Popped [{item}] from the list.")
+            return super().pop(index)
+        except IndexError:
+            print(f"Index [{index}] is out of range.")
+            return None
